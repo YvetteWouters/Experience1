@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Audio1Controller : MonoBehaviour {
+public class Audio3Controller : MonoBehaviour {
 
     public AudioClip[] m_VoiceLines;
     private AudioSource m_AudioSource;
@@ -23,22 +23,8 @@ public class Audio1Controller : MonoBehaviour {
         StartCoroutine(PlaySound(m_VoiceLines[0]));
         yield return new WaitForSeconds(m_VoiceLines[0].length);
 
-        //Knocking on door
-        yield return new WaitForSeconds(3f);
-
-        //Dorothy... Dorothy... Dorothy
         StartCoroutine(PlaySound(m_VoiceLines[1]));
         yield return new WaitForSeconds(m_VoiceLines[1].length);
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(PlaySound(m_VoiceLines[1]));
-        yield return new WaitForSeconds(m_VoiceLines[1].length);
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(PlaySound(m_VoiceLines[1]));
-        yield return new WaitForSeconds(m_VoiceLines[1].length);
-        yield return new WaitForSeconds(1f);
-
-        // Pause opening door
-        yield return new WaitForSeconds(2f);
 
         StartCoroutine(PlaySound(m_VoiceLines[2]));
         yield return new WaitForSeconds(m_VoiceLines[2].length);
@@ -63,27 +49,6 @@ public class Audio1Controller : MonoBehaviour {
 
         StartCoroutine(PlaySound(m_VoiceLines[9]));
         yield return new WaitForSeconds(m_VoiceLines[9].length);
-
-        StartCoroutine(PlaySound(m_VoiceLines[10]));
-        yield return new WaitForSeconds(m_VoiceLines[10].length);
-
-        StartCoroutine(PlaySound(m_VoiceLines[11]));
-        yield return new WaitForSeconds(m_VoiceLines[11].length);
-
-        StartCoroutine(PlaySound(m_VoiceLines[12]));
-        yield return new WaitForSeconds(m_VoiceLines[12].length);
-
-        StartCoroutine(PlaySound(m_VoiceLines[13]));
-        yield return new WaitForSeconds(m_VoiceLines[13].length);
-
-        StartCoroutine(PlaySound(m_VoiceLines[14]));
-        yield return new WaitForSeconds(m_VoiceLines[14].length);
-
-        StartCoroutine(PlaySound(m_VoiceLines[15]));
-        yield return new WaitForSeconds(m_VoiceLines[15].length);
-
-        StartCoroutine(PlaySound(m_VoiceLines[16]));
-        yield return new WaitForSeconds(m_VoiceLines[16].length);
     }
 
     IEnumerator PlaySound(AudioClip a)

@@ -61,6 +61,6 @@ public class GameController : MonoBehaviour {
 
     void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
     }
 }
